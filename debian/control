@@ -1,0 +1,30 @@
+Source: python-otcclient
+Section: python
+Priority: optional
+Maintainer: Matthias Witte <matthias.witte@telekom.de>
+Build-Depends: debhelper (>> 8.0.0),
+	python-all (>= 2.6.6-3~),
+	python-setuptools,
+	python-boto3,
+	python-jinja2,
+	python-six,
+	python-prettytable,
+	python-requests,
+	quilt
+Standards-Version: 3.9.7
+Homepage: https://github.com/OpenTelekomCloud/python-otcclient
+Vcs-Git: git://git@github.com:OpenTelekomCloud/python-otcclient.git
+Vcs-Browser: https://github.com/OpenTelekomCloud/python-otcclient
+
+Package: python-otcclient
+Architecture: all
+Depends: ${misc:Depends},
+	${python:Depends},
+Provides: ${python:Provides}
+Description: AWS like CLI for the Open Telekom Cloud - OTC
+ A CLI to manage OTC cloud environment via command line in a way similiar to AWS. 
+ OTC Cli provides common interface to operation and DEVOPS teams to manage their 
+ cloud services.
+ .
+ OTC makes it easy to use the cloud environment. It borrows the best parts from 
+ Huawei Service and Native Oenstack API.

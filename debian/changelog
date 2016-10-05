@@ -1,0 +1,5 @@
+python-otcclient (0.3.5-1) trusty; urgency=medium
+
+  * Initial release.
+
+ -- Matthias Witte <matthias.witte@telekom.de>  Fri, 16 Sep 2016 10:00:01 +0200
