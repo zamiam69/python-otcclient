@@ -19,6 +19,12 @@ class table(otcpluginbase):
         subkey= kwargs.get('subkey', None)
         listkey = kwargs.get('listkey', None)        
         
+        
+        if isinstance(respjson, (str, unicode)):
+            if len(respjson.strip()) == 0:
+                return
+
+        
         if mainkey is None and listkey is None:
             print (respjson)
             raise "Output error!"
