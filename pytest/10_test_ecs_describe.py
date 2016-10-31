@@ -16,6 +16,15 @@ def test_ecs_describe_instances():
     res = json.loads(ecs.describe_instances())
     assert 'servers' in res
 
+def test_ecs_describe_instances_by_id():
+    OtcConfig.OUTPUT_FORMAT = "noout"
+    instance_id_org = OtcConfig.INSTANCE_ID
+    for i in json.loads(ecs.describe_instances())['servers'][0:3]:
+        OtcConfig.INSTANCE_ID = i['id']
+        res = ecs.describe_instances()
+        assert 'server' in res
+    OtcConfig.INSTANCE_ID = instance_id_org
+
 def test_ecs_describe_vpcs():
     OtcConfig.OUTPUT_FORMAT = "noout"
     res = json.loads(ecs.describe_vpcs())
